@@ -20,7 +20,7 @@ defined('MOODLE_INTERNAL') || die();
 
 global $CFG;
 
-require_once($CFG->dirroot .'/blocks/greetings/lib.php');
+require_once($CFG->dirroot . '/blocks/greetings/lib.php');
 
 /**
  * Greetings library tests
@@ -78,6 +78,7 @@ final class lib_test extends \advanced_testcase {
 
         $this->assertSame(
             get_string($langstring, 'block_greetings', fullname($user)),
-            block_greetings_get_greeting($user));
+            block_greetings_get_greeting($user)
+        );
     }
 }

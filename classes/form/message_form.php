@@ -26,7 +26,6 @@ require_once($CFG->libdir . '/formslib.php');
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class message_form extends \moodleform {
-
     /**
      * Define o form
      * @return void
@@ -48,5 +47,4 @@ class message_form extends \moodleform {
 
         $this->add_action_buttons(true, get_string('submit'));
     }
-
 }

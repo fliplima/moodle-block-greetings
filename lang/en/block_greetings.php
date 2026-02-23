@@ -28,6 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 $string['cannoteditmessage'] = 'You cannot edit this message';
 $string['editmessage'] = 'Edit message';
 $string['greetingloggedinuser'] = 'Greetings, {$a}.';
+$string['greetings:addinstance'] = 'Add a new Greetings block';
 $string['greetings:deleteanymessage'] = 'Delete any message on the Greetings wall';
 $string['greetings:deleteownmessage'] = 'Delete own message on the Greetings wall';
 $string['greetings:editanymessage'] = 'Edit any message on the Greetings wall';

@@ -21,7 +21,7 @@
  *
  * @package    block_greetings
  * @category   access
- * @copyright  2024 YOUR NAME <your@email.com>
+ * @copyright  2026 Felipe Lima <felipelima8556@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -29,6 +29,14 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = [
     'block/greetings:myaddinstance' => [
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archtypes' => [
+            'user' => CAP_ALLOW,
+        ],
+        'clonepermissionsfrom' => 'moodle/my:manageblocks',
+    ],
+    'block/greetings:addinstance' => [
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
         'archtypes' => [

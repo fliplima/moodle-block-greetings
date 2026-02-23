@@ -24,13 +24,12 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-require_once($CFG->dirroot .'/blocks/greetings/lib.php');
+require_once($CFG->dirroot . '/blocks/greetings/lib.php');
 
 /**
  * Class of block_greetings
  */
 class block_greetings extends block_base {
-
     /**
      * Initializes class member variables.
      */
@@ -64,7 +63,6 @@ class block_greetings extends block_base {
         if (!empty($this->config->text)) {
             $this->content->text = $this->config->text;
         } else {
-
             $context = $this->page->context;
 
             $allowpost = has_capability('block/greetings:postmessages', $context);
@@ -85,7 +83,7 @@ class block_greetings extends block_base {
                 $message = required_param('message', PARAM_TEXT);
 
                 if (!empty($message)) {
-                    $record = new stdClass;
+                    $record = new stdClass();
                     $record->message = $message;
                     $record->timecreated = time();
                     $record->userid = $USER->id;
@@ -157,7 +155,7 @@ class block_greetings extends block_base {
                         'small',
                         userdate($m->timecreated),
                         ['class' => 'text-muted']
-                        );
+                    );
                     $text .= html_writer::end_tag('p');
 
                     $text .= html_writer::start_tag('p', ['class' => 'card-footer text-center', 'style' => "padding: 2px"]);
@@ -227,6 +225,8 @@ class block_greetings extends block_base {
      * @return bool[] Array of pages and permissions.
      */
     public function applicable_formats() {
-        return ['my' => true];
+        return [
+            'all' => true,
+        ];
     }
 }
